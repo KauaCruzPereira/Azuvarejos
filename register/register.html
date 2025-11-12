@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Azulvarejo - Registrar</title>
+  </head>
+  <body>
+    <div class="loginPage">
+      <div class="leftSide">
+        <div class="loginPageInterior">
+          <div class="financeAiLogo">
+            <img
+              src="/imagens/Logo.png"
+              alt="logo"
+              width="300px"
+              height="120px"
+            />
+          </div>
+          <div class="welcomeMessage">
+            <div class="title"><h2>Crie sua conta</h2></div>
+          </div>
+
+          <div class="inputsDiv">
+            <label for="name">Nome</label>
+            <input type="text" id="name" class="inputs" autocomplete="off" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" class="inputs" autocomplete="off" />
+
+            <label for="password">Senha</label>
+            <input
+              type="password"
+              id="password"
+              class="inputs"
+              autocomplete="off"
+            />
+
+            <label for="confirmPassword">Confirme sua senha</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              class="inputs"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="loginButtonDiv">
+            <button type="button" id="registerButton" class="loginButton">
+              Registrar
+            </button>
+            <p>
+              Já possui conta?
+              <a href="login.html" class="registerLink">Faça o login aqui</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <img src="images/loginBackground.png" alt="fundo" style="width: 50%" />
+    </div>
+
+    <script>
+      document
+        .getElementById("registerButton")
+        .addEventListener("click", function () {
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          if (!name || !email || !password || !confirmPassword) {
+            alert("Preencha todos os campos!");
+            return;
+          }
+
+          if (password !== confirmPassword) {
+            alert("As senhas não conferem!");
+            return;
+          }
+
+          const userData = { name, email, password };
+
+          localStorage.setItem("userData", JSON.stringify(userData));
+
+          alert("Conta criada com sucesso!");
+          window.location.href = "../home/home.html";
+        });
+    </script>
+  </body>
+</html>

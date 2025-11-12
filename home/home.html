@@ -318,4 +318,24 @@
       </div>
     </footer>
   </body>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const storedUser = JSON.parse(localStorage.getItem("userData"));
+
+    if (!storedUser) {
+      window.location.href = "/register/register.html";
+      return;
+    }
+
+    const nameElement = document.getElementsByClassName("headerText")[1];
+    try {
+      if (storedUser.name && nameElement) {
+        nameElement.textContent = storedUser.name;
+      }
+    } catch (error) {
+      console.error("Erro ao ler userData:", error);
+    }
+  });
+</script>
 </html>

@@ -8,12 +8,12 @@ a {
   color: white;
 }
 
-a:hover{
-    color: hsl(48, 100%, 50%);
+a:hover {
+  color: #f79314;
 }
 
 p {
-  color: white
+  color: white;
 }
 
 .loginPage {
@@ -22,7 +22,7 @@ p {
 }
 
 .leftSide {
-  background-color: hsl(225, 61%, 22%);
+  background: linear-gradient(to left, hsl(225, 61%, 22%), black);
   padding: 48px 32px;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@ p {
 
 .loginPageInterior {
   display: flex;
-  width: 63%;
+  width: 30%;
   padding: 32px 0px;
   flex-direction: column;
   justify-content: center;
@@ -50,14 +50,14 @@ p {
 }
 
 .title {
-  color: hsl(48, 100%, 50%);
+  color: #f79314;
   font-size: 18px;
   font-weight: 700;
   gap: 12px;
 }
 
 .text {
-  color: hsl(48, 100%, 50%);
+  color: #f79314;
   opacity: 0.6;
   font-size: 14px;
   font-weight: 400;
@@ -70,7 +70,7 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 9px 17px;
   background: hsl(225, 62%, 17%);
-  color: hsl(48, 100%, 50%);
+  color: #f79314;
   font-size: 14px;
   font-weight: 600;
   height: 10%;
@@ -96,7 +96,7 @@ p {
 }
 
 .loginButton {
-  background: hsl(48, 100%, 50%);
+  background: #f79314;
   border-radius: 100px;
   border: none;
   padding: 8px 16px;
@@ -108,7 +108,7 @@ p {
 }
 
 .loginButton:hover {
-  background: hsla(48, 100%, 50%, 0.763);
+  background: #f79514c5;
 }
 
 .registerLink {

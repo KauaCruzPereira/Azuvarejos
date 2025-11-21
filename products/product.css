@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  text-decoration: none;
+}
+
+img {
+  border-radius: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button2 {
+  display: inline-block;
+  background-color: hsl(225, 61%, 22%);
+  color: #fff;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  font-size: 10px;
+  width: 100%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.button2:hover {
+  background-color: hsla(225, 61%, 22%, 0.75);
+}
+
+.header {
+  height: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.097);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerText {
+  font-size: 14px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.headerText a {
+  position: relative;
+  color: hsl(225, 61%, 22%);
+  font-weight: bold;
+}
+
+.headerText a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f7931e;
+  transition: width 0.6s ease;
+}
+
+.headerText a:hover::after {
+  width: 100%;
+}
+
+.userContainer {
+  padding: 4px;
+  border: 1px solid hsla(225, 61%, 22%, 0.438);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footerContainer {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  background-color: hsl(225, 61%, 22%);
+  color: #d1d5db;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.fastNavigation li :hover {
+  color: #f7931e;
+}
+
+@media (min-width: 768px) {
+  .footerGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footerGrid a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footerAbout p {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  margin-top: 1rem;
+  max-width: 300px;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #d1d5db;
+  font-size: 20px;
+}
+
+.footerLogo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footerGrid h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.footerContact li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.footerSocial {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footerSocial a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.footerSocial a:hover {
+  background-color: #f7931e;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+  padding-top: 2rem;
+  font-size: 0.85rem;
+  width: 80%;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.product-image {
+  width: 100%;
+  height: 480px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.product-info h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 10px 0 25px;
+}
+
+.description {
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.btn-buy {
+  display: inline-block;
+  background: #1e40af;
+  color: #fff;
+  padding: 16px 35px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-buy:hover {
+  background: #1a2f7a;
+  transform: translateY(-2px);
+}
+
+.spec-box {
+  margin-top: 40px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.spec-box h2 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.spec-box ul {
+  padding-left: 20px;
+  line-height: 1.7;
+}

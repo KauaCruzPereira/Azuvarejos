@@ -22,7 +22,7 @@ p {
 }
 
 .leftSide {
-  background: linear-gradient(to left, hsl(225, 61%, 22%), black);
+  background: linear-gradient(to left, hsl(225, 37%, 48%), hsl(225, 64%, 21%));
   padding: 48px 32px;
   display: flex;
   flex-direction: column;
@@ -41,6 +41,10 @@ p {
   justify-content: center;
   align-items: flex-start;
   gap: 18px;
+  background-color: hsl(225, 62%, 27%);
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 15px 14px 20px 3px #00000033;
 }
 
 .welcomeMessage {
